@@ -1,0 +1,136 @@
+/*XWP Brand Color Variables*/
+$color-black: #000000;
+$color-white: #ffffff;
+$color-green: #1fba82;
+$color-blue: #2351c4;
+$color-grey-blue: #414757;
+$color-grey-dark: #8f9297;
+$color-grey: #bcc0c9;
+$color-grey-light: #e4e6ea;
+
+body {
+	color: $color-grey-blue;
+	font-size: 16px;
+	line-height: 1.625;
+	max-width: 1280px;
+	margin: auto;
+}
+// Text Level Markup
+@font-face {
+	font-family: XWPDisplay;  
+	src: url('../fonts/XWPDisplay-Regular.otf');  
+	font-weight: normal;   
+}
+// Google fonts does not offer the Hariline weight of the font as required by our brand guidelines, so I am adding it here via a driect reference.
+@font-face {
+	font-family: WorkHairline;  
+	src: url('../fonts/WorkSans-Hairline.otf');
+}
+
+$font-xwp: XWPDisplay, sans-serif;
+$font-body: 'Work Sans', sans-serif;
+$font-hairline: WorkHairline, sans-serif;
+$font-mono: 'Roboto Mono', monospace;
+
+
+h1.xwp-font {
+	font-family: $font-xwp;
+	font-size: 70px;
+	font-weight: 300;
+} 
+h1 {
+	font-family: $font-hairline;
+	font-size: 70px;
+	font-weight: 100;
+}
+h2 {
+	font-family: $font-body;
+	font-size: 42px;
+	font-weight: 100;
+	line-height: 1.286;
+}
+h3 {
+	font-family: $font-body;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 1.389; 
+	letter-spacing: -1px;
+}
+h4 {
+	font-family: $font-body;
+	font-size: 26px;
+	font-weight: 600;
+	line-height: 1.385;
+}
+h5 {
+	font-family: $font-body;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3; 
+	letter-spacing: 1.6px;
+}
+h6 {
+	font-family: $font-mono;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+}
+p,
+li,
+dt,
+dd {
+	font-family: $font-body;
+	letter-spacing: .5px;
+}
+p.p-small {
+	font-size: 14px;
+	line-height: 1.429;
+	font-family: $font-body;
+	letter-spacing: .5px;
+}
+p.p-large {
+	font-size: 20px;
+	font-family: $font-body;
+	line-height: 1.5;
+	letter-spacing: -.25px;
+}
+a {
+	text-decoration: none;
+	color: $color-blue;
+}
+blockquote {
+	font-size: 40px;
+	font-weight: 100;
+	line-height: 1.25;
+}
+code,
+abbr,
+acronym,
+tt,
+kbd,
+samp {
+	font-family: $font-mono;
+}
+cite {
+	font-size: 12px;
+	font-family: $font-mono;
+	font-weight: 500;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+small {
+	font-size: 10px;
+	font-family: $font-mono;
+	text-transform: uppercase;
+}
+b,
+strong {
+	font-weight: 600;
+}
+address {
+	font-family: $font-mono;
+	font-style: normal;
+}
+// Form Markup
+
