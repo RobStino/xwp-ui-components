@@ -8,6 +8,11 @@ $color-grey-dark: #8f9297;
 $color-grey: #bcc0c9;
 $color-grey-light: #e4e6ea;
 
+$transition: 0.4s;
+
+* {
+	transition: $transition;
+}
 body {
 	color: $color-grey-blue;
 	font-size: 16px;
@@ -133,4 +138,113 @@ address {
 	font-style: normal;
 }
 // Form Markup
+label,
+legend {
+	display: block;
+	font-size: 11px;
+	font-family: $font-body;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+fieldset {
+	border: 2px solid $color-grey-light;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+textarea {
+	width: 100%;
+	font-size: 14px;
+	font-family: $font-body;
+	border: 2px solid $color-grey-light;
+	padding: 10px 12px;
+}
+input:hover,
+textarea:hover {
+	border-color: $color-grey;
+}
+input:focus,
+textarea:focus {
+	border-color: $color-blue;
+	outline: none;
+}
+button,
+input[type="submit"],
+input[type="reset"],
+.button {
+	position: relative;
+	color: $color-blue;
+	background-color: transparent;
+	border: 2px solid $color-blue;
+	padding: 0 25px;
+	line-height: 3em;
+	cursor: pointer;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.button:hover {
+	background-color: $color-blue;
+	color: #fff;
+}
+// Notes that input fields can't have before or after psuedo selectors, so the following doesn't work on input[type=""]
+button:before,
+.button:before {
+	content: "";
+	width: 5px;
+	height: 2px;
+	right: 20%;
+	top:-2px;
+	display: block;
+	position: absolute;
+	background-color: #fff;
+	transition: $transition;
+}
+button:after,
+.button:after {
+	content: "";
+	width: 10px;
+	height: 2px;
+	left: 5%;
+	bottom:-2px;
+	display: block;
+	position: absolute;
+	background-color: #fff;
+	transition: $transition;
+}
+button em,
+.button em {
+	content: "";
+	width: 2px;
+	height: 8px;
+	right: -2px;
+	bottom: 10%;
+	display: block;
+	position: absolute;
+	background-color: #fff;
+	transition: $transition;
+}
+button:hover:before,
+.button:hover:before {
+	right: 110%;
+	width: 0px;
 
+}
+button:hover:after,
+.button:hover:after {
+	left: 100%;
+	width: 0px;
+}
+button:hover em,
+.button:hover em {
+	height: 0px;
+	right: -2px;
+	bottom: 100%;
+}

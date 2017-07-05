@@ -1,4 +1,7 @@
 /*XWP Brand Color Variables*/
+* {
+  transition: 0.4s; }
+
 body {
   color: #414757;
   font-size: 16px;
@@ -113,3 +116,111 @@ strong {
 address {
   font-family: "Roboto Mono", monospace;
   font-style: normal; }
+
+label,
+legend {
+  display: block;
+  font-size: 11px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+fieldset {
+  border: 2px solid #e4e6ea; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  font-size: 14px;
+  font-family: "Work Sans", sans-serif;
+  border: 2px solid #e4e6ea;
+  padding: 10px 12px; }
+
+input:hover,
+textarea:hover {
+  border-color: #bcc0c9; }
+
+input:focus,
+textarea:focus {
+  border-color: #2351c4;
+  outline: none; }
+
+button,
+input[type="submit"],
+input[type="reset"],
+.button {
+  position: relative;
+  color: #2351c4;
+  background-color: transparent;
+  border: 2px solid #2351c4;
+  padding: 0 25px;
+  line-height: 3em;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.button:hover {
+  background-color: #2351c4;
+  color: #fff; }
+
+button:before,
+.button:before {
+  content: "";
+  width: 5px;
+  height: 2px;
+  right: 20%;
+  top: -2px;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  transition: 0.4s; }
+
+button:after,
+.button:after {
+  content: "";
+  width: 10px;
+  height: 2px;
+  left: 5%;
+  bottom: -2px;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  transition: 0.4s; }
+
+button em,
+.button em {
+  content: "";
+  width: 2px;
+  height: 8px;
+  right: -2px;
+  bottom: 10%;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  transition: 0.4s; }
+
+button:hover:before,
+.button:hover:before {
+  right: 110%;
+  width: 0px; }
+
+button:hover:after,
+.button:hover:after {
+  left: 100%;
+  width: 0px; }
+
+button:hover em,
+.button:hover em {
+  height: 0px;
+  right: -2px;
+  bottom: 100%; }
