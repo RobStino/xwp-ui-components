@@ -34,11 +34,12 @@ $font-mono: 'Roboto Mono', monospace;
 
 * {
 	transition: $transition;
+	box-sizing: border-box;
 }
 body {
 	color: $color-grey-blue;
 	font-size: 16px;
-	line-height: 1.625;
+	line-height: 1.625rem;
 	max-width: 1280px;
 	margin: auto;
 	font-family: $font-body;
@@ -90,7 +91,8 @@ h6 {
 p,
 li,
 dt,
-dd {
+dd,
+div {
 	font-family: $font-body;
 	letter-spacing: .5px;
 	margin-bottom: 1rem;
@@ -184,6 +186,12 @@ dd {
 	margin-bottom: 1rem;
 }
 // Form Markup
+form {
+	ul {
+		list-style: none;
+		padding-left: 0;
+	}
+}
 label,
 legend {
 	display: block;
@@ -235,6 +243,7 @@ input[type="reset"],
 	font-size: 12px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	margin-bottom: 1rem;
 }
 button:hover,
 input[type="submit"]:hover,
@@ -329,6 +338,13 @@ input[type=range]:active::-webkit-slider-thumb {
 	background-color: $color-blue;
 	height: 26px;
 	width: 26px;
+}
+select {
+	border: 2px solid $color-grey-light;
+	padding: 12px;
+	font-family: $font-body;
+	color: $color-grey-blue;
+	outline: none;
 }
 // Tables
 table {

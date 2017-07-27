@@ -9,12 +9,13 @@
   src: url("../fonts/WorkSans-Hairline.otf"); }
 
 * {
-  transition: 0.4s; }
+  transition: 0.4s;
+  box-sizing: border-box; }
 
 body {
   color: #414757;
   font-size: 16px;
-  line-height: 1.625;
+  line-height: 1.625rem;
   max-width: 1280px;
   margin: auto;
   font-family: "Work Sans", sans-serif; }
@@ -65,7 +66,8 @@ h6, details summary, dt {
 p,
 li,
 dt,
-dd {
+dd,
+div {
   font-family: "Work Sans", sans-serif;
   letter-spacing: .5px;
   margin-bottom: 1rem; }
@@ -152,6 +154,10 @@ dl {
 dd {
   margin-bottom: 1rem; }
 
+form ul {
+  list-style: none;
+  padding-left: 0; }
+
 label,
 legend {
   display: block;
@@ -202,7 +208,8 @@ input[type="reset"],
   cursor: pointer;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  margin-bottom: 1rem; }
 
 button:hover,
 input[type="submit"]:hover,
@@ -293,6 +300,13 @@ input[type=range]:active::-webkit-slider-thumb {
   background-color: #2351c4;
   height: 26px;
   width: 26px; }
+
+select {
+  border: 2px solid #e4e6ea;
+  padding: 12px;
+  font-family: "Work Sans", sans-serif;
+  color: #414757;
+  outline: none; }
 
 table {
   border-collapse: collapse;
