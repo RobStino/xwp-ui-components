@@ -7,8 +7,12 @@ $color-grey-blue: #414757;
 $color-grey-dark: #8f9297;
 $color-grey: #bcc0c9;
 $color-grey-light: #e4e6ea;
+$color-yellow: #EDE746;
+$color-red: #CA3235;
+
 
 $transition: 0.4s;
+$transition-quick: 0.2s;
 
 * {
 	transition: $transition;
@@ -150,6 +154,7 @@ legend {
 fieldset {
 	border: 2px solid $color-grey-light;
 }
+input,
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -157,6 +162,7 @@ input[type="date"],
 input[type="number"],
 input[type="tel"],
 textarea {
+	display: block;
 	width: 100%;
 	font-size: 14px;
 	font-family: $font-body;
@@ -176,6 +182,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 .button {
+	width: auto;
 	position: relative;
 	color: $color-blue;
 	background-color: transparent;
@@ -194,7 +201,7 @@ input[type="reset"]:hover,
 	background-color: $color-blue;
 	color: #fff;
 }
-// Notes that input fields can't have before or after psuedo selectors, so the following doesn't work on input[type=""]
+// Note that input fields can't have before or after psuedo selectors, so the following doesn't work on input[type=""]
 button:before,
 .button:before {
 	content: "";
@@ -248,3 +255,71 @@ button:hover em,
 	right: -2px;
 	bottom: 100%;
 }
+// Tables
+table {
+	border-collapse: collapse;
+	width: 100%;
+	font-family: $font-body;
+}
+th {
+	text-align: left;
+}
+th,
+td {
+	border-bottom: 2px solid $color-grey-light;
+	vertical-align: center;
+	padding: 12px;
+}
+tr {
+	background-color: transparent;
+	transition: none;
+}
+tr:hover {
+	background-color: RGBA(65,71,87,0.05);
+}
+hr {
+	border: none;
+	border-bottom: 2px solid $color-grey-light;
+}
+// Meters and Progress Bars
+meter {
+	display: block;
+	width: 100%;
+	height: 25px;
+}
+meter::-webkit-meter-inner-element {
+	background: none;
+	background-color: red;
+}
+meter::-webkit-meter-bar {
+	background: none;
+	background-color: $color-grey-light;
+}
+meter::-webkit-meter-optimum-value {
+	background: none;
+	background-color: $color-green;
+}
+meter::-webkit-meter-suboptimum-value {
+	background: none;
+	background-color: $color-yellow;
+}
+meter::-webkit-meter-even-less-good-value {
+	background: none;
+	background-color: $color-red;
+}
+progress {
+	display: block;
+	width: 100%;
+	height: 25px;
+	-webkit-appearance: none;
+	appearance: none;
+}
+progress::-webkit-progress-bar {
+	background-color: $color-grey-light;
+}
+progress::-webkit-progress-value {
+	background-color: $color-green;
+}
+
+
+
