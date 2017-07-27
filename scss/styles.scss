@@ -14,16 +14,6 @@ $color-red: #CA3235;
 $transition: 0.4s;
 $transition-quick: 0.2s;
 
-* {
-	transition: $transition;
-}
-body {
-	color: $color-grey-blue;
-	font-size: 16px;
-	line-height: 1.625;
-	max-width: 1280px;
-	margin: auto;
-}
 // Text Level Markup
 @font-face {
 	font-family: XWPDisplay;  
@@ -41,6 +31,18 @@ $font-body: 'Work Sans', sans-serif;
 $font-hairline: WorkHairline, sans-serif;
 $font-mono: 'Roboto Mono', monospace;
 
+
+* {
+	transition: $transition;
+}
+body {
+	color: $color-grey-blue;
+	font-size: 16px;
+	line-height: 1.625;
+	max-width: 1280px;
+	margin: auto;
+	font-family: $font-body;
+}
 
 h1.xwp-font {
 	font-family: $font-xwp;
@@ -91,6 +93,7 @@ dt,
 dd {
 	font-family: $font-body;
 	letter-spacing: .5px;
+	margin-bottom: 1rem;
 }
 p.p-small {
 	font-size: 14px;
@@ -112,6 +115,8 @@ blockquote {
 	font-size: 40px;
 	font-weight: 100;
 	line-height: 1.25;
+	border-left: 2px solid $color-blue; 
+	padding-left: 20px;
 }
 code,
 abbr,
@@ -140,6 +145,43 @@ strong {
 address {
 	font-family: $font-mono;
 	font-style: normal;
+}
+details {
+	width: 100%;
+	border-bottom: 2px solid $color-grey-light;
+	padding: 12px;
+	summary {
+		@extend h6;
+		outline: none;
+		cursor: pointer;
+	}
+	summary::-webkit-details-marker {
+		color: $color-blue;
+	}
+}
+mark {
+	background-color: $color-green;
+	color: #fff;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+figcaption {
+	font-family: $font-mono;
+	font-size: 12px;
+}
+menu,
+dir {
+	list-style: none;
+	padding-left: 0;
+}
+dl {
+	margin-bottom: 1rem;
+}
+dt {
+	@extend h6;
+}
+dd {
+	margin-bottom: 1rem;
 }
 // Form Markup
 label,
@@ -254,6 +296,39 @@ button:hover em,
 	height: 0px;
 	right: -2px;
 	bottom: 100%;
+}
+input[type="range"] {
+	-webkit-appearance: none;
+	width: 100%;
+	background: transparent;
+	background-color: $color-grey-light;
+	border: none;
+	padding: 0;
+	height: 8px
+}
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background: $color-grey-blue;
+	cursor: pointer;
+	transition: $transition;
+}
+
+// input[type=range]:focus,
+input[type=range]:hover,
+input[type=range]:active {
+	outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+	background-color: $color-grey;
+}
+// input[type=range]:focus::-webkit-slider-thumb,
+input[type=range]:hover::-webkit-slider-thumb,
+input[type=range]:active::-webkit-slider-thumb {
+	background-color: $color-blue;
+	height: 26px;
+	width: 26px;
 }
 // Tables
 table {
